@@ -1,7 +1,7 @@
 <div align="center">
 <img src="public/img/Infodets_logo.png" alt="InfoDets" width="400" />
 
-# InfoDets - La Memoria Institucional Cobra Vida
+# InfoDets - Gestión Inteligente de la Memoria Institucional
 
 **Presentación interactiva del proyecto InfoDets**  
 Desarrollado por Umbrella Devs para IFTS 11
@@ -39,6 +39,8 @@ La app corre en `http://localhost:3000`
 
 ## ☁️ Deploy en Vercel
 
+El proyecto está deployado en: https://presentacion-final-pearl.vercel.app/
+
 El proyecto está configurado para Vercel con `vercel.json`. Solo importar el repo y deployar.
 
 ## 🎮 Navegación
@@ -49,8 +51,8 @@ El proyecto está configurado para Vercel con `vercel.json`. Solo importar el re
 
 ## 👥 Equipo
 
-- Jorge Loyo
 - Fernando Moya
+- Jorge Loyo
 - Santiago Isbanner
 
 **Umbrella Devs** | IFTS 11
