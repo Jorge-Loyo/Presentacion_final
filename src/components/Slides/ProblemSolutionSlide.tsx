@@ -60,67 +60,63 @@ export default function ProblemSolutionSlide({ id, isActive }: ProblemSolutionSl
       </svg>
 
       {/* Use-case icons - bottom bar */}
-      <div className="absolute bottom-16 left-0 right-0 z-[2] flex justify-center gap-10 pointer-events-none">
+      <div className="absolute bottom-24 left-0 right-0 z-[2] flex justify-center gap-10 pointer-events-none">
         <div data-anim="usecase" className="flex flex-col items-center gap-1.5">
-          <Hospital className="w-10 h-10 text-teal-400" />
-          <span className="text-xs text-teal-400 font-bold uppercase tracking-wider">Hospitales</span>
+          <Hospital className="w-14 h-14 text-teal-400" />
+          <span className="text-sm text-teal-400 font-bold uppercase tracking-wider">Hospitales</span>
         </div>
         <div data-anim="usecase" className="flex flex-col items-center gap-1.5">
-          <Scale className="w-10 h-10 text-amber-400" />
-          <span className="text-xs text-amber-400 font-bold uppercase tracking-wider">Bufetes legales</span>
+          <Scale className="w-14 h-14 text-amber-400" />
+          <span className="text-sm text-amber-400 font-bold uppercase tracking-wider">Bufetes legales</span>
         </div>
         <div data-anim="usecase" className="flex flex-col items-center gap-1.5">
-          <Landmark className="w-10 h-10 text-indigo-400" />
-          <span className="text-xs text-indigo-400 font-bold uppercase tracking-wider">Gobierno</span>
+          <Landmark className="w-14 h-14 text-indigo-400" />
+          <span className="text-sm text-indigo-400 font-bold uppercase tracking-wider">Gobierno</span>
         </div>
         <div data-anim="usecase" className="flex flex-col items-center gap-1.5">
-          <Building2 className="w-10 h-10 text-blue-400" />
-          <span className="text-xs text-blue-400 font-bold uppercase tracking-wider">Empresas</span>
+          <Building2 className="w-14 h-14 text-blue-400" />
+          <span className="text-sm text-blue-400 font-bold uppercase tracking-wider">Empresas</span>
         </div>
       </div>
 
       {/* Content */}
       <div className="absolute inset-0 flex flex-col justify-between p-6 md:p-10 z-10">
         
-        <div data-anim="header" className="text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-amber-500/10 border border-amber-500/30 text-amber-400 mb-2 rounded-none">
-            <AlertTriangle className="w-4 h-4" />
-            <span className="text-xs font-mono font-extrabold tracking-[0.25em] uppercase">El Dilema</span>
-          </div>
+        <div data-anim="header" className="text-center mt-28">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter text-white uppercase">
             El problema y la solución
           </h2>
-          <p className="mt-2 text-sm sm:text-base font-bold italic flex items-center justify-center gap-2">
+          <p className="mt-4 text-lg sm:text-xl md:text-2xl font-bold italic flex items-center justify-center gap-2">
             <span className="inline-flex items-center gap-1.5 not-italic">
-              <span className="inline-block bg-white rounded-md p-1"><img src="/img/chatgpt-logo.png" alt="ChatGPT" className="h-5 inline" /></span>
+              <span className="inline-block bg-white rounded-md p-1"><img src="/img/chatgpt-logo.png" alt="ChatGPT" className="h-8 inline" /></span>
               <span className="text-white font-extrabold">ChatGPT</span>
             </span>
             <span className="text-blue-400">es útil, pero no conoce los datos internos de tu empresa.</span>
           </p>
         </div>
 
-        <div className="flex-grow flex items-center justify-center py-4">
-          <div className="grid grid-cols-1 lg:grid-cols-11 gap-4 lg:gap-8 items-stretch w-full max-w-6xl">
+        <div className="flex-grow flex items-center justify-center py-4 -mt-24">
+          <div className="grid grid-cols-1 lg:grid-cols-11 gap-4 lg:gap-8 items-stretch w-full max-w-[90rem]">
             
-            <div data-anim="cleft" className="lg:col-span-5 bg-gradient-to-br from-red-950/30 to-black/50 border border-red-500/30 p-6 md:p-8 rounded-none flex flex-col justify-between shadow-2xl backdrop-blur-md">
+            <div data-anim="cleft" className="lg:col-span-5 bg-gradient-to-br from-white/80 to-gray-300/70 border border-gray-300/60 p-8 md:p-10 rounded-xl flex flex-col justify-between shadow-2xl backdrop-blur-md">
               <div>
-                <div className="flex items-center justify-between mb-5">
+                <div className="flex items-center justify-between mb-6">
                   <div>
-                    <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight uppercase">LA IA GENÉRICA</h3>
-                    <span className="text-sm italic text-gray-400 flex items-center gap-1.5 mt-1">
-                      <span className="inline-block bg-white rounded p-0.5"><img src="/img/chatgpt-logo.png" alt="ChatGPT" className="h-4 inline" /></span>
-                      <span className="text-white font-bold not-italic">ChatGPT</span> y asistentes comunes
+                    <h3 className="text-2xl sm:text-3xl font-black text-black tracking-tight uppercase">LA IA GENÉRICA</h3>
+                    <span className="text-base italic text-gray-700 flex items-center gap-1.5 mt-1">
+                      <span className="inline-block bg-white rounded p-0.5"><img src="/img/chatgpt-logo.png" alt="ChatGPT" className="h-5 inline" /></span>
+                      <span className="text-black font-bold not-italic">ChatGPT</span> y asistentes comunes
                     </span>
                   </div>
-                  <div className="w-10 h-10 bg-red-500/10 border border-red-500/30 rounded-none flex items-center justify-center">
-                    <XCircle className="w-5 h-5 text-red-400" />
+                  <div className="w-12 h-12 bg-red-500/10 border border-red-500/30 rounded-lg flex items-center justify-center">
+                    <XCircle className="w-6 h-6 text-red-500" />
                   </div>
                 </div>
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-5">
                   {["No conoce tus estatutos ni normativas internas","Desconoce los documentos propios de tu empresa","Da respuestas generales, sin tu contexto real"].map((point, i) => (
-                    <div key={i} data-anim="pl" className="flex gap-3 items-start bg-red-500/5 border border-red-500/10 p-3 rounded-none">
-                      <XCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-sm text-gray-200 font-bold">{point}</span>
+                    <div key={i} data-anim="pl" className="flex gap-3 items-start bg-red-500/5 border border-red-500/20 p-4 rounded-lg">
+                      <XCircle className="w-6 h-6 text-red-500 flex-shrink-0 mt-0.5" />
+                      <span className="text-base text-black font-bold">{point}</span>
                     </div>
                   ))}
                 </div>
@@ -128,28 +124,28 @@ export default function ProblemSolutionSlide({ id, isActive }: ProblemSolutionSl
             </div>
 
             <div data-anim="vs" className="lg:col-span-1 flex justify-center items-center z-20 my-2 lg:my-0 relative">
-              <div data-anim="vsglow" className="absolute w-16 h-16 bg-blue-500/20 rounded-full blur-xl" />
-              <div className="w-12 h-12 bg-blue-600 rotate-45 flex items-center justify-center text-white font-black text-sm border border-white/20 shadow-xl shadow-blue-600/40 relative">
+              <div data-anim="vsglow" className="absolute w-24 h-24 bg-blue-500/20 rounded-full blur-xl" />
+              <div className="w-16 h-16 bg-blue-600 rotate-45 flex items-center justify-center text-white font-black text-lg border border-white/20 shadow-xl shadow-blue-600/40 relative">
                 <span className="-rotate-45">VS</span>
               </div>
             </div>
 
-            <div data-anim="cright" className="lg:col-span-5 bg-gradient-to-br from-blue-950/30 to-black/50 border border-blue-500/30 p-6 md:p-8 rounded-none flex flex-col justify-between shadow-2xl backdrop-blur-md">
+            <div data-anim="cright" className="lg:col-span-5 bg-gradient-to-br from-white/80 to-gray-300/70 border border-gray-300/60 p-8 md:p-10 rounded-xl flex flex-col justify-between shadow-2xl backdrop-blur-md">
               <div>
-                <div className="flex items-center justify-between mb-5">
+                <div className="flex items-center justify-between mb-6">
                   <div>
-                    <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight uppercase">INFODETS, LA SOLUCIÓN</h3>
-                    <span className="text-sm italic text-blue-400 mt-1 block">El empleado fundador: la memoria viviente</span>
+                    <h3 className="text-2xl sm:text-3xl font-black text-black tracking-tight uppercase">INFODETS, LA SOLUCIÓN</h3>
+                    <span className="text-base italic text-gray-700 mt-1 block">El empleado fundador: la memoria viviente</span>
                   </div>
-                  <div className="w-10 h-10 bg-blue-500/10 border border-blue-500/30 rounded-none flex items-center justify-center">
-                    <Brain className="w-5 h-5 text-blue-400" />
+                  <div className="w-12 h-12 bg-blue-500/10 border border-blue-500/30 rounded-lg flex items-center justify-center">
+                    <Brain className="w-6 h-6 text-blue-500" />
                   </div>
                 </div>
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-5">
                   {["La memoria viviente de tu institución","Domina estatutos y documentos internos","Responde con el conocimiento real de tu empresa"].map((point, i) => (
-                    <div key={i} data-anim="pr" className="flex gap-3 items-start bg-blue-500/5 border border-blue-500/10 p-3 rounded-none">
-                      <CheckCircle className="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-sm text-gray-100 font-bold">{point}</span>
+                    <div key={i} data-anim="pr" className="flex gap-3 items-start bg-blue-500/5 border border-blue-500/20 p-4 rounded-lg">
+                      <CheckCircle className="w-6 h-6 text-blue-500 flex-shrink-0 mt-0.5" />
+                      <span className="text-base text-black font-bold">{point}</span>
                     </div>
                   ))}
                 </div>

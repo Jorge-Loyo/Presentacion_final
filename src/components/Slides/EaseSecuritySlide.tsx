@@ -24,7 +24,7 @@ export default function EaseSecuritySlide({ id, isActive }: EaseSecuritySlidePro
     gsap.from(el.querySelector("[data-anim='bot']"), { y: -40, scale: 0.8, duration: 1, ease: "power3.out", delay: 0.7 });
 
     // Loop animations
-    gsap.to(el.querySelectorAll("[data-anim='card']"), { y: -4, duration: 3, repeat: -1, yoyo: true, ease: "sine.inOut", stagger: 0.5, delay: 1.5 });
+    gsap.to(el.querySelectorAll("[data-anim='card']"), { x: -4, duration: 3, repeat: -1, yoyo: true, ease: "sine.inOut", stagger: 0.5, delay: 1.5 });
     gsap.to(el.querySelector("[data-anim='phone']"), { y: -6, duration: 2.5, repeat: -1, yoyo: true, ease: "sine.inOut", delay: 1.5 });
     gsap.to(el.querySelector("[data-anim='bot']"), { rotate: 3, duration: 2, repeat: -1, yoyo: true, ease: "sine.inOut", delay: 1.5 });
 
@@ -51,23 +51,19 @@ export default function EaseSecuritySlide({ id, isActive }: EaseSecuritySlidePro
         <circle data-anim="cdot" cx="300" cy="530" r="3" fill="#6366f1" opacity="0.4" />
       </svg>
 
-      <div className="absolute inset-0 flex flex-col p-5 md:p-8 z-10">
+      <div className="absolute inset-0 flex flex-col p-5 md:p-8 z-10 justify-between">
         
         {/* Header */}
-        <div className="mb-3 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 mb-1 rounded-none">
-            <Lock className="w-4 h-4" />
-            <span className="text-sm font-mono font-extrabold tracking-[0.25em] uppercase">ROBUSTEZ TECNOLÓGICA</span>
-          </div>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white uppercase tracking-tighter">Facilidad de uso y seguridad</h2>
-          <p className="mt-1 text-sm sm:text-base text-blue-400 font-bold italic">Multicanal, 100% responsivo y blindado de extremo a extremo.</p>
+        <div className="mb-3 text-center mt-28">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white uppercase tracking-tighter">Facilidad de uso y seguridad</h2>
+          <p className="mt-4 text-lg sm:text-xl md:text-2xl text-blue-400 font-bold italic">Accedé desde cualquier dispositivo y canal, con total seguridad.</p>
         </div>
 
         {/* Top: 2 columns - Movilidad + Omnicanal */}
-        <div className="flex items-stretch justify-center gap-6 max-w-5xl mx-auto w-full">
+        <div className="flex items-center justify-center gap-6 max-w-6xl mx-auto w-full">
           
           {/* Col 1: MOVILIDAD con phone mockup */}
-          <div data-anim="card" className="bg-gradient-to-br from-white/10 to-gray-300/10 border border-white/20 p-6 rounded-lg flex flex-col items-center hover:border-blue-500/30 transition-all duration-300 shadow-xl flex-1">
+          <div data-anim="card" className="bg-gradient-to-br from-white/80 to-gray-300/70 border border-gray-300/60 p-6 rounded-xl flex flex-col items-center hover:border-blue-500/30 transition-all duration-300 shadow-2xl backdrop-blur-md flex-1">
             {/* Phone mockup grande */}
             <div data-anim="phone" className="mb-4">
               <div className="w-28 h-52 bg-[#0a0a0b] rounded-xl border-2 border-slate-600 p-1.5 flex flex-col justify-between shadow-2xl">
@@ -90,9 +86,9 @@ export default function EaseSecuritySlide({ id, isActive }: EaseSecuritySlidePro
             </div>
             {/* Text */}
             <div className="text-center">
-              <span className="text-lg font-mono text-blue-400 uppercase tracking-widest font-bold">MOVILIDAD</span>
-              <h3 className="text-xl font-black uppercase text-white tracking-wider">100% Responsivo</h3>
-              <p className="text-gray-200 text-sm leading-relaxed font-medium mt-1">
+              <span className="text-xl font-mono text-blue-500 uppercase tracking-widest font-bold">MOVILIDAD</span>
+              <h3 className="text-2xl font-black uppercase text-black tracking-wider">100% Responsivo</h3>
+              <p className="text-gray-700 text-base leading-relaxed font-medium mt-1">
                 Pensado para el celular: úsalo desde cualquier dispositivo, en cualquier lugar y a cualquier hora.
               </p>
             </div>
@@ -106,29 +102,29 @@ export default function EaseSecuritySlide({ id, isActive }: EaseSecuritySlidePro
           </div>
 
           {/* Col 2: OMNICANAL con bot y logos */}
-          <div data-anim="card" className="bg-gradient-to-br from-white/10 to-gray-300/10 border border-white/20 p-6 rounded-lg flex flex-col items-center hover:border-indigo-500/30 transition-all duration-300 shadow-xl flex-1">
+          <div data-anim="card" className="bg-gradient-to-br from-white/80 to-gray-300/70 border border-gray-300/60 p-6 rounded-xl flex flex-col items-center hover:border-indigo-500/30 transition-all duration-300 shadow-2xl backdrop-blur-md flex-1">
             {/* Bot con canales grande */}
             <div data-anim="bot" className="flex flex-col items-center gap-3 mb-4">
-              <div className="w-36 h-36 bg-indigo-600/20 border border-indigo-500/40 rounded-full flex items-center justify-center">
-                <Bot className="w-20 h-20 text-indigo-400" />
+              <div className="w-36 h-36 bg-indigo-600/30 border border-indigo-500/60 rounded-full flex items-center justify-center">
+                <Bot className="w-20 h-20 text-indigo-600" />
               </div>
               <div className="flex gap-3">
-                <div className="w-14 h-14 bg-green-600/20 border border-green-500/40 rounded-full flex items-center justify-center">
-                  <MessageSquare className="w-7 h-7 text-green-400" />
+                <div className="w-14 h-14 bg-green-600/30 border border-green-500/60 rounded-full flex items-center justify-center">
+                  <MessageSquare className="w-7 h-7 text-green-600" />
                 </div>
-                <div className="w-14 h-14 bg-blue-500/20 border border-blue-400/40 rounded-full flex items-center justify-center">
-                  <svg className="w-7 h-7 text-blue-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.94 8.13l-1.97 9.28c-.15.67-.54.83-1.09.52l-3.02-2.22-1.46 1.4c-.16.16-.3.3-.61.3l.22-3.06 5.57-5.03c.24-.22-.05-.33-.38-.13l-6.88 4.34-2.96-.93c-.65-.2-.66-.65.13-.96l11.57-4.46c.54-.2 1.01.13.83.95z"/></svg>
+                <div className="w-14 h-14 bg-blue-500/30 border border-blue-400/60 rounded-full flex items-center justify-center">
+                  <svg className="w-7 h-7 text-blue-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.94 8.13l-1.97 9.28c-.15.67-.54.83-1.09.52l-3.02-2.22-1.46 1.4c-.16.16-.3.3-.61.3l.22-3.06 5.57-5.03c.24-.22-.05-.33-.38-.13l-6.88 4.34-2.96-.93c-.65-.2-.66-.65.13-.96l11.57-4.46c.54-.2 1.01.13.83.95z"/></svg>
                 </div>
-                <div className="w-14 h-14 bg-white/10 border border-white/30 rounded-full flex items-center justify-center">
-                  <Globe className="w-7 h-7 text-white" />
+                <div className="w-14 h-14 bg-gray-500/30 border border-gray-400/60 rounded-full flex items-center justify-center">
+                  <Globe className="w-7 h-7 text-gray-700" />
                 </div>
               </div>
             </div>
             {/* Text */}
             <div className="text-center">
-              <span className="text-lg font-mono text-indigo-400 uppercase tracking-widest font-bold">OMNICANAL</span>
-              <h3 className="text-xl font-black uppercase text-white tracking-wider">Chatbot ágil</h3>
-              <p className="text-gray-200 text-sm leading-relaxed font-medium mt-1">
+              <span className="text-xl font-mono text-indigo-500 uppercase tracking-widest font-bold">OMNICANAL</span>
+              <h3 className="text-2xl font-black uppercase text-black tracking-wider">Chatbot ágil</h3>
+              <p className="text-gray-700 text-base leading-relaxed font-medium mt-1">
                 Se integra como un bot conversacional en su Web, Telegram y WhatsApp. Mayor accesibilidad.
               </p>
             </div>
@@ -136,32 +132,32 @@ export default function EaseSecuritySlide({ id, isActive }: EaseSecuritySlidePro
         </div>
 
         {/* Bottom: Security section full width */}
-        <div data-anim="card" className="bg-gradient-to-br from-white/10 to-gray-300/10 border border-white/20 rounded-lg p-5 mt-4 shadow-xl">
-          <h3 className="text-sm font-black uppercase text-white tracking-wider mb-4 pb-2 border-b border-white/10 flex items-center gap-2">
-            <ShieldAlert className="w-5 h-5 text-teal-400" />
+        <div data-anim="card" className="bg-gradient-to-br from-white/80 to-gray-300/70 border border-gray-300/60 rounded-xl p-5 mt-6 shadow-2xl backdrop-blur-md max-w-6xl mx-auto w-full">
+          <h3 className="text-sm font-black uppercase text-black tracking-wider mb-4 pb-2 border-b border-gray-300 flex items-center gap-2">
+            <ShieldAlert className="w-5 h-5 text-teal-500" />
             Seguridad y privacidad de extremo a extremo
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             <div className="flex flex-col items-center text-center gap-2">
-              <div className="w-14 h-14 bg-blue-500/10 border border-blue-500/30 rounded-full flex items-center justify-center">
-                <Lock className="w-7 h-7 text-blue-400" />
+              <div className="w-14 h-14 bg-blue-500/20 border border-blue-500/50 rounded-full flex items-center justify-center">
+                <Lock className="w-7 h-7 text-blue-600" />
               </div>
-              <h4 className="font-bold text-blue-400 text-base uppercase">Datos protegidos</h4>
-              <p className="text-gray-300 text-sm">Información cifrada y resguardada en todo momento.</p>
+              <h4 className="font-bold text-black text-base uppercase">Datos protegidos</h4>
+              <p className="text-gray-700 text-sm">Información cifrada y resguardada en todo momento.</p>
             </div>
             <div className="flex flex-col items-center text-center gap-2">
-              <div className="w-14 h-14 bg-indigo-500/10 border border-indigo-500/30 rounded-full flex items-center justify-center">
-                <Eye className="w-7 h-7 text-indigo-400" />
+              <div className="w-14 h-14 bg-indigo-500/20 border border-indigo-500/50 rounded-full flex items-center justify-center">
+                <Eye className="w-7 h-7 text-indigo-600" />
               </div>
-              <h4 className="font-bold text-blue-400 text-base uppercase">Control total</h4>
-              <p className="text-gray-300 text-sm">Tu conocimiento interno se mantiene dentro de tu organización.</p>
+              <h4 className="font-bold text-black text-base uppercase">Control total</h4>
+              <p className="text-gray-700 text-sm">Tu conocimiento interno se mantiene dentro de tu organización.</p>
             </div>
             <div className="flex flex-col items-center text-center gap-2">
-              <div className="w-14 h-14 bg-teal-500/10 border border-teal-500/30 rounded-full flex items-center justify-center">
-                <Key className="w-7 h-7 text-teal-400" />
+              <div className="w-14 h-14 bg-teal-500/20 border border-teal-500/50 rounded-full flex items-center justify-center">
+                <Key className="w-7 h-7 text-teal-600" />
               </div>
-              <h4 className="font-bold text-blue-400 text-base uppercase">Accesos confiables</h4>
-              <p className="text-gray-300 text-sm">Permisos definidos y consultas trazables y auditables.</p>
+              <h4 className="font-bold text-black text-base uppercase">Accesos confiables</h4>
+              <p className="text-gray-700 text-sm">Permisos definidos y consultas trazables y auditables.</p>
             </div>
           </div>
         </div>

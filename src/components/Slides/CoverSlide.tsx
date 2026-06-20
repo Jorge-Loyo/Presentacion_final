@@ -85,7 +85,7 @@ export default function CoverSlide({ id, isActive }: CoverSlideProps) {
       </svg>
 
       {/* Left bubbles */}
-      <div className="absolute left-2 md:left-3 top-[10%] bottom-[10%] w-56 md:w-64 flex flex-col justify-around pointer-events-none z-[1]">
+      <div className="absolute left-2 md:left-3 top-[10%] bottom-[10%] w-56 md:w-64 flex flex-col justify-around pointer-events-none z-1">
         {leftBubbles.map((msg, i) => (
           <div key={i} className="bl opacity-0 bg-blue-600/10 border border-blue-500/25 rounded-lg px-4 py-3 text-sm text-blue-300/80 font-medium">
             {msg}
@@ -94,7 +94,7 @@ export default function CoverSlide({ id, isActive }: CoverSlideProps) {
       </div>
 
       {/* Right bubbles */}
-      <div className="absolute right-2 md:right-3 top-[10%] bottom-[10%] w-56 md:w-64 flex flex-col justify-around pointer-events-none z-[1]">
+      <div className="absolute right-2 md:right-3 top-[10%] bottom-[10%] w-56 md:w-64 flex flex-col justify-around pointer-events-none z-1">
         {rightBubbles.map((msg, i) => (
           <div key={i} className="br opacity-0 bg-indigo-600/10 border border-indigo-500/25 rounded-lg px-4 py-3 text-sm text-indigo-300/80 font-medium text-right">
             {msg}
@@ -103,27 +103,27 @@ export default function CoverSlide({ id, isActive }: CoverSlideProps) {
       </div>
 
       {/* Main content */}
-      <div className="absolute inset-0 flex flex-col justify-between items-center px-[15rem] py-3 z-10">
-        <div className="w-full flex justify-between items-center">
-          <div data-anim="badge"><img src="/img/Logo_IFTS11.jpg" alt="IFTS 11" className="h-28 object-contain rounded" /></div>
-          <div data-anim="badge"><img src="/img/Umbrella_logo2.png" alt="Umbrella Devs" className="h-32 object-contain" /></div>
+      <div className="absolute inset-0 flex flex-col justify-between items-center px-60 py-3 z-10">
+        <div className="w-full flex justify-between items-center mt-16">
+          <div data-anim="badge"><img src="/img/Logo_IFTS11.jpg" alt="IFTS 11" className="h-40 object-contain rounded" /></div>
+          <div data-anim="badge"><img src="/img/Umbrella_logo2.png" alt="Umbrella Devs" className="h-44 object-contain" /></div>
         </div>
 
-        <div className="flex flex-col items-center text-center gap-4 -mt-32">
-          <div data-anim="logo" className="w-full max-w-lg bg-gradient-to-br from-white/90 via-gray-100/85 to-gray-300/80 rounded-lg p-4 shadow-2xl">
+        <div className="flex flex-col items-center text-center gap-14 -mt-32">
+          <div data-anim="logo" className="w-full max-w-lg bg-linear-to-br from-white/90 via-gray-100/85 to-gray-300/80 rounded-lg p-4 shadow-2xl">
             <img src="/img/Infodets_logo.png" alt="Infodets" className="w-full object-contain" />
           </div>
           <h1 data-anim="title" className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tighter leading-tight">
-            <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-blue-600 bg-clip-text text-transparent">
-              La Memoria Institucional Cobra Vida
+            <span className="bg-linear-to-r from-blue-400 via-indigo-400 to-blue-600 bg-clip-text text-transparent">
+              GESTIÓN INTELIGENTE<br />DE LA MEMORIA INSTITUCIONAL
             </span>
           </h1>
         </div>
 
-        <div className="flex flex-col items-center gap-2 mb-12">
+        <div className="flex flex-col items-center gap-2 mb-32">
           <span data-anim="dev" className="text-sm font-bold tracking-[0.3em] text-gray-400 uppercase font-mono">Desarrollado Por:</span>
           <div className="flex flex-wrap justify-center gap-3">
-            {['Jorge Loyo', 'Fernando Moya', 'Santiago Isbanner'].map((dev, i) => (
+            {['Fernando Moya', 'Jorge Loyo', 'Santiago Isbanner'].map((dev, i) => (
               <div key={i} data-anim="dev" className="bg-white/5 border border-white/10 px-5 py-2.5 rounded-none text-base font-bold tracking-wider text-white flex items-center gap-2">
                 <div className="w-2 h-2 bg-blue-500 rotate-45" />
                 <span>{dev}</span>

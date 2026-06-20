@@ -108,13 +108,13 @@ export default function ActionDemoSlide({ id, isActive }: ActionDemoSlideProps) 
       </div>
 
       {/* Content */}
-      <div className="absolute inset-0 flex flex-col justify-center items-center p-6 md:p-10 z-10 text-center gap-8">
+      <div className="absolute inset-0 flex flex-col items-center p-6 md:p-10 z-10 text-center gap-8">
         
-        <div data-anim="title">
+        <div data-anim="title" className="text-center mt-28">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter text-white uppercase">
             Véalo en acción
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-gray-300 italic">
+          <p className="mt-4 text-lg sm:text-xl md:text-2xl text-blue-400 font-bold italic">
             Una demostración vale más que mil palabras.
           </p>
         </div>
@@ -131,6 +131,16 @@ export default function ActionDemoSlide({ id, isActive }: ActionDemoSlideProps) 
         <p data-anim="sub" className="text-base sm:text-lg font-black text-white uppercase tracking-wide">
           Solicita tu demo y dale vida a la memoria de tu institución.
         </p>
+
+        {/* Logos */}
+        <div data-anim="sub" className="flex items-center justify-center gap-6">
+          <div className="bg-white rounded-lg p-3">
+            <img src="/img/Infodets_logo.png" alt="Infodets" className="h-16 object-contain" />
+          </div>
+          <span className="text-white text-2xl font-black uppercase">BY</span>
+          <img src="/img/Umbrella_logo2.png" alt="Umbrella Devs" className="h-24 object-contain" />
+          <img src="/img/Logo_IFTS11.jpg" alt="IFTS 11" className="h-16 object-contain rounded" />
+        </div>
 
         {/* Footer */}
         <div className="absolute bottom-5 left-5 right-5 flex justify-between items-center text-[10px] tracking-widest font-bold text-gray-500 font-mono pt-3 border-t border-white/10">
