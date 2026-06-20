@@ -1,0 +1,6 @@
+{
+  "name": "La Memoria Institucional Cobra Vida",
+  "description": "Presentación moderna e interactiva de INFODETS con animaciones dinámicas, efecto parallax y desplazamiento horizontal fluido impulsado por GSAP.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
