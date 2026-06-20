@@ -27,8 +27,13 @@ export default function App() {
     };
 
     const handleKey = (e: KeyboardEvent) => {
-      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') goTo(activeSlide + 1);
-      else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') goTo(activeSlide - 1);
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === 'PageDown' || e.key === ' ') {
+        e.preventDefault();
+        goTo(activeSlide + 1);
+      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp' || e.key === 'PageUp' || e.key === 'Backspace') {
+        e.preventDefault();
+        goTo(activeSlide - 1);
+      }
     };
 
     window.addEventListener('wheel', handleWheel, { passive: false });
