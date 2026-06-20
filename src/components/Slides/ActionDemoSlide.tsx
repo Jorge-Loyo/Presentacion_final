@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import { Play, Bot, Smartphone, Lock, FileCheck, CloudUpload, Cog, UserCog, MessageSquare, Globe, Hospital, Scale, Landmark, Building2 } from 'lucide-react';
+import { Bot, Smartphone, Lock, FileCheck, CloudUpload, Cog, UserCog, MessageSquare, Globe, Hospital, Scale, Landmark, Building2 } from 'lucide-react';
 
 interface ActionDemoSlideProps {
   id: string;
@@ -20,7 +20,6 @@ export default function ActionDemoSlide({ id, isActive }: ActionDemoSlideProps) 
     gsap.from(el.querySelector("[data-anim='video']"), { scale: 0.9, duration: 1.2, delay: 0.3, ease: "power3.out" });
     gsap.from(el.querySelector("[data-anim='sub']"), { y: 30, duration: 1, delay: 0.6, ease: "power3.out" });
     gsap.to(el.querySelector("[data-anim='video']"), { y: -5, duration: 3, repeat: -1, yoyo: true, ease: "sine.inOut", delay: 1.5 });
-    gsap.to(el.querySelector("[data-anim='play']"), { scale: 1.1, duration: 1.5, repeat: -1, yoyo: true, ease: "sine.inOut", delay: 1.5 });
 
     // Floating icons
     el.querySelectorAll("[data-anim='float']").forEach((icon, i) => {
@@ -119,13 +118,14 @@ export default function ActionDemoSlide({ id, isActive }: ActionDemoSlideProps) 
           </p>
         </div>
 
-        <div data-anim="video" className="w-full max-w-3xl aspect-video bg-white/5 border border-white/10 rounded-lg flex flex-col items-center justify-center gap-4 backdrop-blur-md shadow-xl">
-          <div data-anim="play" className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform">
-            <Play className="w-7 h-7 text-white ml-1" />
-          </div>
-          <p className="text-sm text-gray-400 font-medium">
-            Espacio reservado para el video de la plataforma en funcionamiento
-          </p>
+        <div data-anim="video" className="w-full max-w-3xl aspect-video rounded-lg overflow-hidden shadow-xl">
+          <video
+            className="w-full h-full object-cover rounded-lg"
+            controls
+            poster=""
+          >
+            <source src="/img/0620.mp4" type="video/mp4" />
+          </video>
         </div>
 
         <p data-anim="sub" className="text-base sm:text-lg font-black text-white uppercase tracking-wide">
