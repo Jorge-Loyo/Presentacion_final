@@ -1,20 +1,56 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+<img src="public/img/Infodets_logo.png" alt="InfoDets" width="400" />
+
+# InfoDets - La Memoria Institucional Cobra Vida
+
+**Presentación interactiva del proyecto InfoDets**  
+Desarrollado por Umbrella Devs para IFTS 11
+
 </div>
 
-# Run and deploy your AI Studio app
+---
 
-This contains everything you need to run your app locally.
+## 🚀 Tecnologías
 
-View your app in AI Studio: https://ai.studio/apps/4b2c4949-f126-429b-88c1-e6e3531d2c60
+- **React 19** + **TypeScript**
+- **Vite** - Build tool
+- **GSAP** - Animaciones
+- **Tailwind CSS 4** - Estilos
+- **Lucide React** - Iconos
 
-## Run Locally
+## 📋 Estructura de Diapositivas
 
-**Prerequisites:**  Node.js
+| # | Título | Contenido |
+|---|--------|-----------|
+| 1 | Portada | Logo InfoDets, título, desarrolladores, IFTS 11, Umbrella Devs |
+| 2 | El problema y la solución | ChatGPT vs InfoDets, casos de uso empresarial |
+| 3 | Facilidad de uso y seguridad | Movilidad, Omnicanal, Seguridad E2E |
+| 4 | Aplicación Viva | Motor de Mejora Continua (ciclo: Fiabilidad, Ingesta, Aprende Solo, Gobernanza) |
+| 5 | Véalo en acción | Demo / Video de la plataforma |
 
+## 🖥️ Ejecutar localmente
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+```bash
+npm install
+npm run dev
+```
+
+La app corre en `http://localhost:3000`
+
+## ☁️ Deploy en Vercel
+
+El proyecto está configurado para Vercel con `vercel.json`. Solo importar el repo y deployar.
+
+## 🎮 Navegación
+
+- **Scroll** (rueda del mouse): avanzar/retroceder
+- **Flechas →↓**: siguiente diapositiva
+- **Flechas ←↑**: diapositiva anterior
+
+## 👥 Equipo
+
+- Jorge Loyo
+- Fernando Moya
+- Santiago Isbanner
+
+**Umbrella Devs** | IFTS 11
