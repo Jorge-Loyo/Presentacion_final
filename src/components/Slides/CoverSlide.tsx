@@ -130,6 +130,7 @@ export default function CoverSlide({ id, isActive }: CoverSlideProps) {
               </div>
             ))}
           </div>
+          <span data-anim="dev" className="text-sm font-bold tracking-wider text-gray-400 font-mono mt-2">Desarrollo de Software - Comisión 1C/2026</span>
         </div>
       </div>
     </div>

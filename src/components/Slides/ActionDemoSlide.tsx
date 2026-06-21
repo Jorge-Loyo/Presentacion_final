@@ -120,7 +120,7 @@ export default function ActionDemoSlide({ id, isActive }: ActionDemoSlideProps) 
 
         <div data-anim="video" className="w-full max-w-3xl aspect-video rounded-lg overflow-hidden shadow-xl">
           <video
-            className="w-full h-full object-cover rounded-lg"
+            className="w-full h-full object-contain rounded-lg bg-black"
             controls
             poster=""
           >
